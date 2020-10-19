@@ -1,8 +1,8 @@
 ## Workshop: Containerization with Docker and Singularity
 
 ### Date: 
-_Part 1 (Docker)_: Thursday, October 29, 2020, 10:00 am - 12:00 pm
-_Part 2 (Singularity)_: Thursday, November 5, 2020, 10:00 am - 12:00 pm
+* _Part 1 (Docker)_: Thursday, October 29, 2020, 10:00 am - 12:00 pm
+* _Part 2 (Singularity)_: Thursday, November 5, 2020, 10:00 am - 12:00 pm
 
 ### Location: 
 
