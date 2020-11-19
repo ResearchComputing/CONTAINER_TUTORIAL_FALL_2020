@@ -28,7 +28,7 @@ export SINGULARITY_TMPDIR=/projects/$USER
 export SINGULARITY_CACHEDIR=/projects/$USER 
 ```
 
-#### Change to your `/scratch` directory and make a sandbox directory you can experiment in:
+#### Change to your `/projects` directory and make a sandbox directory you can experiment in:
 ```
 cd /projects/$USER 
 mkdir sandbox
