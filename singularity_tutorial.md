@@ -21,21 +21,16 @@ ssh -X monaghaa@login.rc.colorado.edu
 ssh scompile
 ```
 
-#### Now start an interactive job:
-```
-sinteractive -n 2 -t 90 --reservation=container
-```
-
 #### Load singularity and set up environment
 ```
-module load singularity/3.3.0
-export SINGULARITY_TMPDIR=/scratch/summit/$USER
-export SINGULARITY_CACHEDIR=/scratch/summit/$USER 
+module load singularity/3.6.4
+export SINGULARITY_TMPDIR=/projects/$USER
+export SINGULARITY_CACHEDIR=/projects/$USER 
 ```
 
 #### Change to your `/scratch` directory and make a sandbox directory you can experiment in:
 ```
-cd /scratch/summit/$USER 
+cd /projects/$USER 
 mkdir sandbox
 cd sandbox
 ```
@@ -152,9 +147,8 @@ In order to use it, we load the gcc and openmpi modules on Summit (the openmpi v
 
 #### Load the gcc and openmpi modules:
 ```	
-export MODULEPATH=/curc/sw/modules/spack/spring2020/linux-rhel7-x86_64/Core:$MODULEPATH
-module load gcc/8.4.0
-module load openmpi/2.1.6
+module load gcc/6.1.0
+module load openmpi/2.0.1
 ```
 
 #### Now run the container. Note that you preface the command with _`mpirun –n <numprocs>`_:
@@ -165,5 +159,5 @@ mpirun -n 2 singularity exec hello_openmpi.sif mpi_hello_world
 
 You should see 2 processes, one with rank '0' and the other with '1', indicating that this MPI program is working propery.
 
-That concludes tutorial on running containers with Singularity.  Now return to the [course slides](https://github.com/ResearchComputing/Container_tutorial_Spring_2020/blob/master/Containers-Spring2020.pdf) and we will finish out this mini course with some commentary and demos on building containers with Singularity. 
+That concludes tutorial on running containers with Singularity.  Now return to the [course slides](https://github.com/ResearchComputing/CONTAINER_TUTORIAL_FALL_2020/blob/main/Containers-Pt2-Fall2020.pdf) and we will finish out this mini course with some commentary and demos on building containers with Singularity. 
 
